@@ -1,0 +1,25 @@
+### ⚙️ .gitignore
+
+```gitignore
+# Sistema padrão
+.DS_Store
+Thumbs.db
+
+# Arquivos temporários
+*.log
+*.tmp
+*.bak
+*.swp
+
+# Diretórios de build
+/node_modules
+/dist
+/build
+
+# Arquivos do VSCode
+.vscode/
+
+# Backup do sistema
+*.zip
+*.rar
+*.7z
