@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="description" content="Cadastro de voluntários e doadores - Amor em Patas"/>
+  <title>Amor em Patas - Cadastro</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <script defer src="js/scripts.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#form-area">Pular para o formulário</a>
+
+  <header class="header" role="banner">
+    <div class="container header-inner">
+      <div class="logo">🐾 Amor em Patas</div>
+
+      <nav class="navbar" role="navigation" aria-label="Menu principal">
+        <button class="hamburger" aria-expanded="false" aria-controls="main-menu">☰</button>
+        <ul class="menu" id="main-menu">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="projetos.html">Projetos</a></li>
+          <li><a href="cadastro.html" class="active">Cadastro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="form-area" class="container formulario">
+    <h1>Cadastre-se e Faça Parte da Mudança</h1>
+    <p>Preencha o formulário abaixo e junte-se à nossa rede de amor e solidariedade.</p>
+
+    <form id="cadastroForm" novalidate>
+      <fieldset>
+        <legend>Informações Pessoais</legend>
+
+        <label for="nome">Nome Completo</label>
+        <input id="nome" name="nome" type="text" required placeholder="Seu nome completo" />
+
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" required placeholder="seu@exemplo.com" />
+
+        <label for="cpf">CPF</label>
+        <input id="cpf" name="cpf" type="text" maxlength="14" required placeholder="000.000.000-00" />
+
+        <label for="telefone">Telefone</label>
+        <input id="telefone" name="telefone" type="tel" maxlength="15" required placeholder="(00) 90000-0000" />
+
+        <label for="nascimento">Data de Nascimento</label>
+        <input id="nascimento" name="nascimento" type="date" required />
+
+        <label for="cep">CEP</label>
+        <input id="cep" name="cep" type="text" maxlength="9" required placeholder="00000-000" />
+
+        <label for="endereco">Endereço</label>
+        <input id="endereco" name="endereco" type="text" required placeholder="Rua, número, bairro" />
+
+        <label for="cidade">Cidade</label>
+        <input id="cidade" name="cidade" type="text" required />
+
+        <label for="estado">Estado</label>
+        <input id="estado" name="estado" type="text" required />
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Como Deseja Contribuir?</legend>
+        <label class="checkbox"><input type="checkbox" name="contribuir" value="voluntario" /> Quero ser voluntário(a)</label>
+        <label class="checkbox"><input type="checkbox" name="contribuir" value="doar" /> Desejo doar recursos ou mantimentos</label>
+        <label class="checkbox"><input type="checkbox" name="contribuir" value="adotar" /> Gostaria de adotar um animal</label>
+      </fieldset>
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Enviar Cadastro</button>
+        <button type="reset" class="btn btn-outline">Limpar</button>
+      </div>
+
+      <div id="formAlert" class="alert" role="status" aria-live="polite" hidden></div>
+    </form>
+  </main>
+
+  <!-- Modal de sucesso -->
+  <div class="modal" id="modalSucesso" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-content">
+      <h3 id="modalTitle">🎉 Cadastro enviado com sucesso!</h3>
+      <p>Obrigado por se juntar à nossa causa. Entraremos em contato em breve.</p>
+      <div class="modal-actions">
+        <button id="fecharModal" class="btn btn-primary">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast (pequena notificação) -->
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden>Cadastro enviado com sucesso! 🐾</div>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p>© 2025 Amor em Patas</p>
+    </div>
+  </footer>
+</body>
+</html>

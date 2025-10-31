@@ -1,0 +1,103 @@
+/* layout.css - Grid 12 colunas e breakpoints */
+@import url('variables.css');
+
+*{box-sizing:border-box;}
+html,body{margin:0;padding:0;font-family:var(--font-family);background:var(--neutra-clara);color:var(--neutra-escura);}
+
+.container{
+  width:90%;
+  max-width:var(--container-width);
+  margin:0 auto;
+}
+
+/* Grid de 12 colunas usando CSS Grid */
+.grid {
+  display:grid;
+  grid-template-columns:repeat(12,1fr);
+  gap:var(--space-sm);
+}
+
+/* Utilitários para colunas (span) */
+.col-1{grid-column:span 1;}
+.col-2{grid-column:span 2;}
+.col-3{grid-column:span 3;}
+.col-4{grid-column:span 4;}
+.col-5{grid-column:span 5;}
+.col-6{grid-column:span 6;}
+.col-7{grid-column:span 7;}
+.col-8{grid-column:span 8;}
+.col-9{grid-column:span 9;}
+.col-10{grid-column:span 10;}
+.col-11{grid-column:span 11;}
+.col-12{grid-column:span 12;}
+
+/* Header layout */
+.header{background:var(--cor-primaria);padding:var(--space-sm) 0;}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:var(--space-sm);}
+
+/* Navbar menu */
+.navbar{position:relative;}
+.menu{list-style:none;display:flex;gap:var(--space-sm);align-items:center;margin:0;padding:0;}
+.menu a{color:white;text-decoration:none;padding:6px 8px;border-radius:6px;font-weight:500;}
+.menu a.active, .menu a:hover{background:rgba(255,255,255,0.08);text-decoration:underline;}
+
+/* Hero area grid */
+.grid-intro{display:grid;grid-template-columns:repeat(12,1fr);gap:var(--space-lg);align-items:center;padding:var(--space-lg) 0;}
+.intro{grid-column:span 7;}
+.hero-media{grid-column:span 5;}
+.hero-media img{width:100%;border-radius:var(--card-radius);display:block;}
+
+/* Galeria (uses own grid) */
+.grid-galeria{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-xs);margin-top:var(--space-sm);}
+
+/* Cards de projeto e animais - responsivo */
+.card, .projeto-card{background:white;border-radius:var(--card-radius);box-shadow:var(--card-shadow);overflow:hidden;display:flex;flex-direction:column;}
+.card img{width:100%;height:200px;object-fit:cover;}
+.card-body{padding:var(--space-sm);display:flex;align-items:center;justify-content:space-between;gap:8px;}
+.projeto-card{padding:var(--space-md);}
+
+/* Footer */
+.footer{background:var(--cor-primaria);padding:var(--space-sm) 0;color:white;margin-top:var(--space-lg);}
+
+/* Aux */
+.btn-inline{display:inline-block;text-decoration:none;padding:8px 12px;border-radius:8px;}
+
+/* layout para projetos: cards em grid */
+.grid-cards-projects{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-md);align-items:start;}
+
+/* Aside */
+.ajude{background:var(--neutra-medio);padding:var(--space-md);border-radius:10px;}
+
+/* RESPONSIVO - 5 breakpoints: 1200, 992, 768, 576, 360 */
+@media (max-width:1200px){
+  .grid-intro{grid-template-columns:repeat(12,1fr);}
+  .intro{grid-column:span 7;}
+  .hero-media{grid-column:span 5;}
+}
+
+@media (max-width:992px){
+  .grid-cards-projects{grid-template-columns:repeat(2,1fr);}
+  .grid-galeria{grid-template-columns:repeat(2,1fr);}
+  .intro{grid-column:span 8;}
+  .hero-media{grid-column:span 4;}
+}
+
+@media (max-width:768px){
+  .menu{display:none;flex-direction:column;background:var(--cor-primaria);position:absolute;top:64px;right:16px;padding:var(--space-sm);border-radius:8px;box-shadow:var(--card-shadow);}
+  .menu.show{display:flex;}
+  .hamburger{display:block;}
+  .grid-galeria{grid-template-columns:1fr;}
+  .grid-intro{grid-template-columns:1fr;}
+  .grid-cards-projects{grid-template-columns:1fr;}
+}
+
+@media (max-width:576px){
+  .grid-galeria img{height:150px;}
+  .card img{height:150px;}
+  .hero-media img{height:auto;}
+}
+
+@media (max-width:360px){
+  .container{width:95%;}
+  .card-body h3{font-size:var(--font-size-sm);}
+}

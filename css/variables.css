@@ -1,0 +1,34 @@
+:root{
+  /* Paleta (8 cores) - tons pastéis de rosa/acompanha neutros */
+  --cor-primaria: #ffc2d1;   /* rosa claro */
+  --cor-secundaria: #ff8fab; /* rosa médio */
+  --cor-accent: #e76f8a;     /* rosa escuro */
+  --cor-ternaria: #ffb3c6;   /* rosa suave */
+  --neutra-clara: #fff8f9;
+  --neutra-medio: #f2ecef;
+  --neutra-escura: #333333;
+  --neutra-muted: #9b9b9b;
+
+  /* Tipografia (5 tamanhos) */
+  --font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --font-size-xxl: 28px;
+  --font-size-xl: 22px;
+  --font-size-lg: 18px;
+  --font-size-md: 16px;
+  --font-size-sm: 14px;
+
+  /* Espaçamento (sistema modular) */
+  --space-xxs: 8px;
+  --space-xs: 16px;
+  --space-sm: 24px;
+  --space-md: 32px;
+  --space-lg: 48px;
+  --space-xl: 64px;
+
+  /* Sombra / bordas */
+  --card-radius: 12px;
+  --card-shadow: 0 6px 18px rgba(0,0,0,0.08);
+
+  /* Grid */
+  --container-width: 1200px;
+}
